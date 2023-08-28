@@ -16,7 +16,7 @@
 title: Intro to Computation for Linguists
 description: A UC Berkeley course designed by students aiming to introduce computational linguistics
 author: Andres Sanchez, Zaid Maayah, Pranav Jayachand
-baseurl: '/sp23' # the subpath of your site, e.g. /blog
+baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://calslugs-decal.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 
 # Theme settings
