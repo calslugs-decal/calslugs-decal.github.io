@@ -19,6 +19,8 @@ author: Zaid Maayah
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://calslugs-decal.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 
+logo: '/assets/images/logo.png'
+
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
 color_scheme: dark
