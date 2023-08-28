@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title: Home
 permalink: /:path/
 nav_order: 1
