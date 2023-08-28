@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Intro to Computation for Linguists
-description: A UC Berkeley course designed by students aiming to introduce computational linguistics
-author: Andres Sanchez, Zaid Maayah, Pranav Jayachand
+title: The DeCal Program @ SLUgS
+description: The DeCal Program @ SLUgS
+author: Zaid Maayah
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://calslugs-decal.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -26,30 +26,6 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 footer_content:
-
-# Collections for website data
-collections:
-  - staffers
-  - modules
-  - schedules
-# Default layouts for each collection type
-defaults:
-  - scope:
-      path: ''
-      type: modules
-    values:
-      layout: module
-  - scope:
-      path: ''
-      type: schedules
-    values:
-      layout: schedule
-  - scope:
-      path: ''
-      type: staffers
-    values:
-      layout: staffer
-
 
 compress_html:
   clippings: all
