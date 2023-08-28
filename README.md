@@ -1,3 +1,11 @@
+---
+layout: default
+title: Home
+nav_exclude: true
+---
+
+
+
 # The DeCal Program @ SLUgS
 
 The Society of Linguistics Undergraduate Students (SLUgS) is UC Berkeley's official student organization for undergraduate students interested in the field of Linguistics.
