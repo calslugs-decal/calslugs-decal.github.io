@@ -18,44 +18,8 @@ layout: table_wrappers
     {% include icons/external_link.html %}
   </svg>
 
-  {% capture nav %}
-    {% assign pages_top_size = site.html_pages
-        | where_exp:"item", "item.title != nil"
-        | where_exp:"item", "item.parent == nil"
-        | where_exp:"item", "item.nav_exclude != true"
-        | size %}
-    {% if pages_top_size > 0 %}
-      {% include nav.html pages=site.html_pages key=nil %}
-    {% endif %}
-    {% if site.just_the_docs.collections %}
-      {% assign collections_size = site.just_the_docs.collections | size %}
-      {% for collection_entry in site.just_the_docs.collections %}
-        {% assign collection_key = collection_entry[0] %}
-        {% assign collection_value = collection_entry[1] %}
-        {% assign collection = site[collection_key] %}
-        {% if collection_value.nav_exclude != true %}
-          {% include nav.html pages=collection key=collection_key %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endcapture %}
 
   <div id="main-content-wrap" class="main-content-wrap">
-    {% unless page.url == "/" %}
-      {% if page.parent %}
-        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-          <ol class="breadcrumb-nav-list">
-            {% if page.grand_parent %}
-              <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-              <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-            {% else %}
-              <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
-            {% endif %}
-            <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-          </ol>
-        </nav>
-      {% endif %}
-    {% endunless %}
     <div id="main-content" class="main-content" role="main">
       {% if site.heading_anchors != false %}
         {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" %}
