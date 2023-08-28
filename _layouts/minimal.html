@@ -26,19 +26,7 @@ layout: table_wrappers
       {% else %}
         {{ content }}
       {% endif %}
-
-      {% if page.has_children == true and page.has_toc != false %}
-        <hr>
-        {% include toc_heading_custom.html %}
-        <ul>
-          {% for child in toc_list %}
-            <li>
-              <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-
+      
       {% capture footer_custom %}
         {%- include footer_custom.html -%}
       {% endcapture %}
